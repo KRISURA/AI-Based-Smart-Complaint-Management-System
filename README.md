@@ -7,8 +7,8 @@ A full-stack MERN application with AI-powered complaint analysis using OpenRoute
 ---
 
 ## 🚀 Live Demo
-- **Frontend:** `https://complaint-management-frontend.onrender.com`
-- **Backend API:** `https://complaint-management-backend.onrender.com`
+- **Frontend:** https://ai-based-smart-complaint-management-mype.onrender.com
+- **Backend API:** https://ai-based-smart-complaint-management-bsz3.onrender.com
 
 ---
 
@@ -280,7 +280,8 @@ git push -u origin main
    - `MONGODB_URI` → your MongoDB Atlas URI
    - `JWT_SECRET` → `smartcomplaint_jwt_secret_key_2025`
    - `OPENROUTER_API_KEY` → your OpenRouter key
-5. Click **Deploy** → Copy the backend URL (e.g., `https://complaint-management-backend.onrender.com`)
+5. Click **Deploy**
+   - ✅ **Deployed at:** https://ai-based-smart-complaint-management-bsz3.onrender.com
 
 ### Step 3: Deploy Frontend on Render
 1. Go to Render → **New** → **Static Site**
@@ -290,8 +291,9 @@ git push -u origin main
    - **Build Command:** `npm install && npm run build`
    - **Publish Directory:** `build`
 4. Add Environment Variable:
-   - `REACT_APP_API_URL` → paste your backend URL from Step 2
+   - `REACT_APP_API_URL` → `https://ai-based-smart-complaint-management-bsz3.onrender.com`
 5. Click **Deploy**
+   - ✅ **Deployed at:** https://ai-based-smart-complaint-management-mype.onrender.com
 
 ---
 
