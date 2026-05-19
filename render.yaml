@@ -1,0 +1,32 @@
+services:
+  # ─── Backend Web Service ───────────────────────────────────────────────────
+  - type: web
+    name: complaint-management-backend
+    env: node
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: PORT
+        value: 5000
+      - key: MONGODB_URI
+        sync: false          # Set manually in Render dashboard
+      - key: JWT_SECRET
+        sync: false          # Set manually in Render dashboard
+      - key: OPENROUTER_API_KEY
+        sync: false          # Set manually in Render dashboard
+
+  # ─── Frontend Static Site ──────────────────────────────────────────────────
+  - type: web
+    name: complaint-management-frontend
+    env: static
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    staticPublishPath: build
+    envVars:
+      - key: REACT_APP_API_URL
+        sync: false          # Set to your backend URL e.g. https://complaint-management-backend.onrender.com
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html

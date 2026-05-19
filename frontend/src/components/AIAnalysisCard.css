@@ -1,0 +1,129 @@
+.ai-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(26, 115, 232, 0.15);
+  border: 1px solid #e8f0fe;
+  margin-top: 1.5rem;
+}
+
+.ai-card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #e8f0fe;
+}
+
+.ai-icon {
+  font-size: 1.8rem;
+}
+
+.ai-card-header h3 {
+  font-size: 1.2rem;
+  color: #1a73e8;
+  flex: 1;
+}
+
+.ai-badge {
+  background: linear-gradient(135deg, #1a73e8, #6c63ff);
+  color: white;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.ai-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.ai-item {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 1rem;
+  border-left: 4px solid #1a73e8;
+}
+
+.ai-item.department {
+  border-left-color: #34a853;
+  background: #e6f4ea;
+}
+
+.ai-item.summary {
+  border-left-color: #9c27b0;
+  background: #f3e5f5;
+}
+
+.ai-item.response {
+  border-left-color: #ff9800;
+  background: #fff3e0;
+  grid-column: 1 / -1;
+}
+
+.ai-item-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #5f6368;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.ai-item-value {
+  font-size: 0.95rem;
+  color: #202124;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.response-text {
+  font-style: italic;
+  color: #5f6368;
+}
+
+/* Loading state */
+.ai-card.loading {
+  text-align: center;
+}
+
+.ai-loading-bar {
+  height: 6px;
+  background: #e8f0fe;
+  border-radius: 3px;
+  overflow: hidden;
+  margin: 1rem 0;
+}
+
+.ai-loading-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #1a73e8, #6c63ff);
+  border-radius: 3px;
+  animation: loading 1.5s infinite;
+  width: 40%;
+}
+
+@keyframes loading {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(350%); }
+}
+
+.ai-loading-text {
+  color: #5f6368;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+  .ai-grid {
+    grid-template-columns: 1fr;
+  }
+  .ai-item.response {
+    grid-column: 1;
+  }
+}
